@@ -26,10 +26,11 @@ class BitGoObjects {
 
   async getTransactionlist()
   {
-    const transactionlist = await this.allTransactions;
+      const transactionlist = await this.allTransactions;
+    const  translist= await transactionlist.allTextContents();
     const count = await transactionlist.count();
-    console.log(transactionlist);
     console.log(count); 
+    console.log(translist); 
   }
 
 }
