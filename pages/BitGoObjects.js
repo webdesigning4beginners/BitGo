@@ -27,7 +27,8 @@ class BitGoObjects {
   async getTransactionlist()
   {
     const transactionlist = await this.allTransactions;
-    const count = await this.transactionlist.count();
+    const count = await transactionlist.count();
+    console.log(transactionlist);
     console.log(count); 
   }
 
