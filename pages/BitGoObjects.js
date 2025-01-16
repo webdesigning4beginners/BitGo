@@ -16,11 +16,11 @@ class BitGoObjects {
     await expect(this.Transactionheader).toBeVisible();
     await expect(this.Transactionheader).toHaveText(value);
   }
-  async validateTransactionHash(value)
+ async validateTransactionHash(value)
   {
     this.transactionhash = await this.page.locator(`//a[text()='${value}']`);
-    await expect(this.Transactionheader).toBeVisible();
-    await expect(this.Transactionheader).toHaveText(value);
+    await expect(this.transactionhash).toBeVisible();
+    await expect(this.transactionhash).toHaveText(value);
 
   }
 
